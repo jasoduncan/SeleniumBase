@@ -3605,32 +3605,32 @@ def get_local_driver(
                         )
                 driver.default_get = driver.get  # Save copy of original
                 if uc_activated:
-                    driver.get = lambda url: uc_special_open_if_cf(
-                        driver,
-                        url,
-                        proxy_string,
-                        mobile_emulator,
-                        device_width,
-                        device_height,
-                        device_pixel_ratio,
-                    )
-                    driver.uc_open = lambda url: uc_open(driver, url)
-                    driver.uc_open_with_tab = (
-                        lambda url: uc_open_with_tab(driver, url)
-                    )
-                    driver.uc_open_with_reconnect = (
-                        lambda *args, **kwargs: uc_open_with_reconnect(
-                            driver, *args, **kwargs
-                        )
-                    )
-                    driver.uc_click = lambda *args, **kwargs: uc_click(
-                        driver, *args, **kwargs
-                    )
-                    driver.uc_switch_to_frame = (
-                        lambda *args, **kwargs: uc_switch_to_frame(
-                            driver, *args, **kwargs
-                        )
-                    )
+                    # driver.get = lambda url: uc_special_open_if_cf(
+                    #     driver,
+                    #     url,
+                    #     proxy_string,
+                    #     mobile_emulator,
+                    #     device_width,
+                    #     device_height,
+                    #     device_pixel_ratio,
+                    # )
+                    # driver.uc_open = lambda url: uc_open(driver, url)
+                    # driver.uc_open_with_tab = (
+                    #     lambda url: uc_open_with_tab(driver, url)
+                    # )
+                    # driver.uc_open_with_reconnect = (
+                    #     lambda *args, **kwargs: uc_open_with_reconnect(
+                    #         driver, *args, **kwargs
+                    #     )
+                    # )
+                    # driver.uc_click = lambda *args, **kwargs: uc_click(
+                    #     driver, *args, **kwargs
+                    # )
+                    # driver.uc_switch_to_frame = (
+                    #     lambda *args, **kwargs: uc_switch_to_frame(
+                    #         driver, *args, **kwargs
+                    #     )
+                    # )
                     if mobile_emulator:
                         uc_metrics = {}
                         if (
